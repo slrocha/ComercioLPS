@@ -18,7 +18,7 @@
                 </and>
                 <and mandatory="true" name="Consultar">
                     <description>
-Feature criada para cadastrar o empreendimento, as unidades e os funcionários. 
+Feature criada para cadastrar o empreendimento, as unidades e os funcionários.
 </description>
                     <feature mandatory="true" name="C_Empreendimento"/>
                     <feature mandatory="true" name="C_Unidade"/>
@@ -56,7 +56,11 @@ consultar médico
                     <feature name="Dispesa"/>
                 </or>
                 <feature mandatory="true" name="EmissãoBoleto"/>
-                <feature mandatory="true" name="GerarRelatórios"/>
+                <and mandatory="true" name="GerarRelatórios">
+                    <feature name="Financeiro"/>
+                    <feature name="BensTitulos"/>
+                    <feature name="PrevisaoOrcamentaria"/>
+                </and>
                 <and name="Eleições">
                     <description>
 Feature para realização de Eleições, sendo definida qual a função alvo da eleição, qual o período de vigência do eleito, quais os candidatos, quais as funções e quem está apto a votar.
