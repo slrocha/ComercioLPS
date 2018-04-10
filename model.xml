@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<featureModel>
+    <properties/>
+    <struct>
+        <and abstract="true" mandatory="true" name="ComercioLPS">
+            <and name="Base">
+                <feature name="FAQ"/>
+                <feature name="Trabalhe Conosco"/>
+                <feature name="Sobre Nós"/>
+                <feature name="Consultar Serviços"/>
+                <or name="Informações">
+                    <feature name="Notícias"/>
+                    <feature name="Mural de Recados"/>
+                </or>
+            </and>
+        </and>
+    </struct>
+    <constraints/>
+    <calculations Auto="true" Constraints="true" Features="true" Redundant="true" Tautology="true"/>
+    <comments/>
+    <featureOrder userDefined="false"/>
+</featureModel>
