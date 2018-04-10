@@ -4,14 +4,55 @@
     <struct>
         <and abstract="true" mandatory="true" name="ComercioLPS">
             <and name="Base">
-                <feature name="FAQ"/>
                 <feature name="Trabalhe Conosco"/>
                 <feature name="Sobre Nós"/>
-                <feature name="Consultar Serviços"/>
                 <or name="Informações">
                     <feature name="Notícias"/>
                     <feature name="Mural de Recados"/>
                 </or>
+                <and mandatory="true" name="Cadastrar">
+                    <feature mandatory="true" name="Empreendimento"/>
+                    <feature mandatory="true" name="Unidade"/>
+                    <feature mandatory="true" name="Funcionário"/>
+                </and>
+                <and mandatory="true" name="Consultar">
+                    <feature mandatory="true" name="C_Empreendimento"/>
+                    <feature mandatory="true" name="C_Unidade"/>
+                    <feature mandatory="true" name="C_Funcionário"/>
+                    <feature name="Serviços"/>
+                    <feature name="Especialidades"/>
+                    <feature name="C_Médico">
+                        <description>
+consultar médico
+</description>
+                    </feature>
+                </and>
+                <and mandatory="true" name="Atualizar">
+                    <feature mandatory="true" name="A_Empreendimento"/>
+                    <feature mandatory="true" name="A_Unidade"/>
+                    <feature mandatory="true" name="A_Funcionário"/>
+                </and>
+                <and mandatory="true" name="Remover">
+                    <feature mandatory="true" name="R_Empreendimento"/>
+                    <feature mandatory="true" name="R_Unidade"/>
+                    <feature mandatory="true" name="R_Funcionário"/>
+                </and>
+                <feature name="FAQ"/>
+                <and mandatory="true" name="Alugar">
+                    <feature mandatory="true" name="Espaço"/>
+                    <feature name="VagaGaragem"/>
+                    <feature name="ÁreaComum"/>
+                </and>
+                <or name="Avaliar">
+                    <feature name="Médico"/>
+                    <feature name="Atendimento"/>
+                </or>
+                <or name="Controle">
+                    <feature name="Receita"/>
+                    <feature name="Dispesa"/>
+                </or>
+                <feature mandatory="true" name="EmissãoBoleto"/>
+                <feature mandatory="true" name="GerarRelatórios"/>
             </and>
         </and>
     </struct>
