@@ -3,76 +3,58 @@
     <properties/>
     <struct>
         <and abstract="true" mandatory="true" name="ComercioLPS">
-            <and name="Base">
-                <feature name="Trabalhe Conosco"/>
-                <feature name="Sobre Nós"/>
-                <or name="Informações">
-                    <feature name="Notícias"/>
-                    <feature name="Mural de Recados"/>
-                </or>
-                <and mandatory="true" name="Cadastrar">
-                    <feature mandatory="true" name="Empreendimento"/>
-                    <feature mandatory="true" name="Unidade"/>
-                    <feature mandatory="true" name="Funcionário"/>
-                    <feature name="Visitante"/>
-                </and>
-                <and mandatory="true" name="Consultar">
-                    <description>
-Feature criada para cadastrar o empreendimento, as unidades e os funcionários.
-</description>
-                    <feature mandatory="true" name="C_Empreendimento"/>
-                    <feature mandatory="true" name="C_Unidade"/>
-                    <feature mandatory="true" name="C_Funcionário"/>
-                    <feature name="Serviços"/>
-                    <feature name="Especialidades"/>
-                    <feature name="C_Médico">
-                        <description>
-consultar médico
-</description>
-                    </feature>
-                </and>
-                <and mandatory="true" name="Atualizar">
-                    <feature mandatory="true" name="A_Empreendimento"/>
-                    <feature mandatory="true" name="A_Unidade"/>
-                    <feature mandatory="true" name="A_Funcionário"/>
-                </and>
-                <and mandatory="true" name="Remover">
-                    <feature mandatory="true" name="R_Empreendimento"/>
-                    <feature mandatory="true" name="R_Unidade"/>
-                    <feature mandatory="true" name="R_Funcionário"/>
-                </and>
-                <feature name="FAQ"/>
-                <and mandatory="true" name="Alugar">
-                    <feature mandatory="true" name="Espaço"/>
-                    <feature name="VagaGaragem"/>
-                    <feature name="ÁreaComum"/>
-                </and>
-                <or name="Avaliar">
-                    <feature name="Médico"/>
-                    <feature name="Atendimento"/>
-                </or>
-                <or name="Controle">
+            <feature mandatory="true" name="Empreendimento"/>
+            <feature mandatory="true" name="Unidade"/>
+            <feature mandatory="true" name="Funcionário"/>
+            <feature mandatory="true" name="EmissãoBoleto"/>
+            <and mandatory="true" name="Alugar">
+                <feature mandatory="true" name="Espaço"/>
+                <feature name="VagaGaragem"/>
+                <feature name="ÁreaComum"/>
+            </and>
+            <and mandatory="true" name="GerarRelatórios">
+                <and name="Financeiro">
                     <feature name="Receita"/>
                     <feature name="Dispesa"/>
-                </or>
-                <feature mandatory="true" name="EmissãoBoleto"/>
-                <and mandatory="true" name="GerarRelatórios">
-                    <feature name="Financeiro"/>
-                    <feature name="BensTitulos"/>
-                    <feature name="PrevisaoOrcamentaria"/>
                 </and>
-                <and name="Eleições">
+                <feature name="BensTitulos"/>
+                <feature name="PrevisaoOrcamentaria"/>
+            </and>
+            <feature name="Trabalhe Conosco"/>
+            <feature name="Sobre Nós"/>
+            <feature name="FAQ"/>
+            <feature name="Visitante"/>
+            <or name="Informações">
+                <feature name="Notícias"/>
+                <feature name="Mural de Recados"/>
+            </or>
+            <feature name="Serviços"/>
+            <and name="ConsultasMédicas">
+                <description>
+Feature criada para cadastrar o empreendimento, as unidades e os funcionários.
+</description>
+                <feature name="Especialidades"/>
+                <feature name="Medico">
                     <description>
+consultar médico
+</description>
+                </feature>
+            </and>
+            <or name="Avaliar">
+                <feature name="AvaliarAtendimento"/>
+                <feature name="AvaliarInfraEstrutura"/>
+            </or>
+            <and name="Eleições">
+                <description>
 Feature para realização de Eleições, sendo definida qual a função alvo da eleição, qual o período de vigência do eleito, quais os candidatos, quais as funções e quem está apto a votar.
 </description>
-                    <feature name="Propostas"/>
-                    <feature mandatory="true" name="Votação"/>
-                </and>
-                <and name="OrganizarEventos">
-                    <feature name="DividirTarefas"/>
-                    <feature name="ProduzirConvite"/>
-                    <feature name="AlertaPrazos"/>
-                </and>
+                <feature name="Propostas"/>
+                <feature mandatory="true" name="Votação"/>
+            </and>
+            <and name="OrganizarEventos">
+                <feature name="DividirTarefas"/>
+                <feature name="ProduzirConvite"/>
+                <feature name="AlertaPrazos"/>
             </and>
         </and>
     </struct>
