@@ -8,18 +8,19 @@
             <feature mandatory="true" name="Funcionário"/>
             <feature mandatory="true" name="EmissãoBoleto"/>
             <and mandatory="true" name="Alugar">
-                <feature mandatory="true" name="Espaço"/>
+                <feature mandatory="true" name="UnidadeEspaço"/>
                 <feature name="VagaGaragem"/>
                 <feature name="ÁreaComum"/>
             </and>
-            <and mandatory="true" name="GerarRelatórios">
+            <or mandatory="true" name="GerarRelatórios">
                 <and name="Financeiro">
                     <feature name="Receita"/>
                     <feature name="Dispesa"/>
                 </and>
                 <feature name="BensTitulos"/>
                 <feature name="PrevisaoOrcamentaria"/>
-            </and>
+                <feature name="Inadimplência"/>
+            </or>
             <feature name="Trabalhe Conosco"/>
             <feature name="Sobre Nós"/>
             <feature name="FAQ"/>
