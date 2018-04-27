@@ -6,10 +6,16 @@
             <feature mandatory="true" name="Empreendimento"/>
             <feature mandatory="true" name="Unidade"/>
             <feature mandatory="true" name="Funcionário"/>
-            <feature mandatory="true" name="EmissãoBoleto"/>
-            <and mandatory="true" name="Alugar">
-                <feature mandatory="true" name="UnidadeEspaço"/>
-                <feature name="VagaGaragem"/>
+            <and mandatory="true" name="EmissãoBoleto">
+                <feature name="Cálculo_m²"/>
+                <feature name="Cálculo_cômodos"/>
+            </and>
+            <and name="Alugar">
+                <feature name="UnidadeEspaço"/>
+                <and name="VagaGaragem">
+                    <feature name="Contratada"/>
+                    <feature name="Rotativa"/>
+                </and>
                 <feature name="ÁreaComum"/>
             </and>
             <or mandatory="true" name="GerarRelatórios">
@@ -50,7 +56,7 @@ consultar médico
 Feature para realização de Eleições, sendo definida qual a função alvo da eleição, qual o período de vigência do eleito, quais os candidatos, quais as funções e quem está apto a votar.
 </description>
                 <feature name="Propostas"/>
-                <feature mandatory="true" name="Votação"/>
+                <feature name="Votação"/>
             </and>
             <and name="OrganizarEventos">
                 <feature name="DividirTarefas"/>
