@@ -36,17 +36,6 @@
                 <feature name="Mural de Recados"/>
             </or>
             <feature name="Serviços"/>
-            <and name="ConsultasMédicas">
-                <description>
-Feature criada para cadastrar o empreendimento, as unidades e os funcionários.
-</description>
-                <feature name="Especialidades"/>
-                <feature name="Medico">
-                    <description>
-consultar médico
-</description>
-                </feature>
-            </and>
             <or name="Avaliar">
                 <feature name="AvaliarAtendimento"/>
                 <feature name="AvaliarInfraEstrutura"/>
